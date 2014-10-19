@@ -21,12 +21,13 @@ body {
   }
 
   .message {
-    @include grid-column($columns:6, $center: true);
+    @include grid-column($columns:12, $center: true);
     font-family: "Georgia";
     font-size: 1.5rem;
     text-align: center;
 
   }
+  
 
   .contacts {
     @include grid-column($columns:6, $center: true);
