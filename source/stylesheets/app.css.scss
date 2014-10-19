@@ -1,31 +1,58 @@
 @import "settings";
 @import "foundation.scss";
 
-
-header {
-  @include grid-row;
-
-  .logo  { @include grid-column($columns:3, $center:true); }
-  padding-bottom: em-calc(10px);
-
-}
-
-
-.main-content {
-  @include grid-row;
-
-  aside  {
-    @include grid-column($columns:6);
-    // @media #{$medium-up} {
-    //   @include grid-column($columns:3);
-    // }
+body {
+  .bg {
+    background: image-url("ebc-bg.jpg") no-repeat center;
+    text-align: center;
+    height: 1000px;
+    display: block;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;    
+  }
+  
+  .logo {
+    @include grid-column($columns:6, $center: true);
+    img {
+      display: block;
+      margin: 4rem auto 1rem auto;
+    }
   }
 
-  article  {
-    @include grid-column($columns:6);
-    // @media #{$medium-up} {
-    //   @include grid-column($columns:8, $offset: 1);
-    // }
+  .message {
+    @include grid-column($columns:6, $center: true);
+    font-family: "Georgia";
+    font-size: 1.5rem;
+    text-align: center;
+
   }
+
+  .contacts {
+    @include grid-column($columns:6, $center: true);
+    .social-links {
+      text-align: center;
+      @include grid-column($columns:12, $center: true);
+      img {
+        margin: 1rem 0.2rem;
+      }
+    }
+  }
+
+  .map {
+    @include grid-column($columns:8, $center: true);
+    img {
+      display: block;
+      margin: 1rem auto;
+      padding: 0.5rem;
+      background-color: white;
+    }
+  }
+
+  .address {
+    @include grid-column($columns:6, $center: true);
+    text-align: center;
+  }  
+
 
 }
