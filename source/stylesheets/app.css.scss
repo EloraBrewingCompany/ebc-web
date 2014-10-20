@@ -55,5 +55,12 @@ body {
     text-align: center;
   }  
 
+  .phone {
+    @include grid-column($columns:12, $center: true);
+    font-family: "Georgia";
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    text-align: center;    
+  }
 
 }
